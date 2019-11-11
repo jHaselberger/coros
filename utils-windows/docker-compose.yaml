@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+    headless-ros-vnc:
+        ports:
+            - '80:8080'
+            #- '5900:5900'
+            - '6080:6080'
+        volumes:
+            - type: bind
+              source: C:/ros-persistent-data
+              target: /my_ros_data
+              volume:
+                nocopy: true
+            - type: volume
+              source: workspace
+              target: /workspace
+              volume:
+                nocopy: true
+        image: johannhaselberger/coros
+
+volumes:
+    workspace:

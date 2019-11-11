@@ -1,4 +1,7 @@
 <img src="https://raw.githubusercontent.com/gismo07/coros/master/assets/coros.png" />
+
+![Docker Automated build](https://img.shields.io/docker/automated/johannhaselberger/coros?style=flat-square) ![Docker Build Status](https://img.shields.io/docker/build/johannhaselberger/coros?style=flat-square) ![Docker Pulls](https://img.shields.io/docker/pulls/johannhaselberger/coros?style=flat-square) ![MicroBadger Size](https://img.shields.io/microbadger/image-size/johannhaselberger/coros?style=flat-square)
+
 Jumpstart ROS developent with no headache! Full browser support. OpenGL support with no need of a physically atachted GPU.
 
 >>Attention: the project is still under development. There may be gaps in the manual. Don't forget to mount the appropriate volumes to prevent data loss!

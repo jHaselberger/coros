@@ -148,12 +148,12 @@ ENTRYPOINT ["/entry/entrypoint_code.sh"]
 SHELL ["/bin/bash", "-c"]
 
 # source ros for every new terminal session
-RUN echo "source /opt/ros/melodic/setup.bash" >> /.bashrc
+RUN echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 
 # set our workdir
 WORKDIR /workspace
 
 # expose the vnc, novnc and code-server ports
-EXPOSE 5900
+#EXPOSE 5900
 EXPOSE 6080
 EXPOSE 8080

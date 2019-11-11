@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "starting xvfb"
 Xvfb :99 -ac -screen 0 "$XVFB_WHD" -nolisten tcp &

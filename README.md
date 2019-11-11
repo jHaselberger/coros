@@ -6,7 +6,7 @@ Jumpstart ROS developent with no headache! Full browser support. OpenGL support 
 ## 📦 Included
 
 ### ROS
- - full ros distro (currently melodic)
+ - full ros distro (**currently melodic**)
  - rqt and all plugins
  - rviz
 
@@ -27,11 +27,24 @@ There are two provided start and stop scripts - one for windows, the other one f
 
 
  ## 💻 Access the environment
-  - to open the IDE, simply open the browser and go to [localhost:80](). The password is currently set to `dev@ros`. 
-  - to see rviz or some other gui stuff, open another browser tab [localhost:6080/vnc.html]() and click connect.
+  - to open the IDE, simply open the browser and go to [localhost:80]()
+  - The password is currently set to `dev@ros`
+  - to see rviz or some other gui stuff, open another browser tab [localhost:6080/vnc.html]() and click connect
 
 ## 💾 Data storage
 Per default all perisistent data is located at the host pc (assuming windows for now) under `C:/ros-persistent-data`. Create this folder **before** starting the container.
+
+### How to bind to a local folder
+If you want to bind a existing folder of the host to the docker container, the `docker-compose.yaml` file is used for that. For each folder, a new `volume` section has to be added:
+
+```yaml
+        volumes:
+            - type: bind
+              source: /<PATH_TO_FOLDER_ON_HOST>
+              target: /<TARGET_DESTINATION_ON_THE_CONTAINER>
+              volume:
+                nocopy: true  # just keep that
+```
 
 ## 🔧 Configuration
 The environment comes shipped with a `docker-compose.yaml` to start the service and manage some parameters:
@@ -53,12 +66,12 @@ services:
         image: johannhaselberger/coros
 ```
 
-Headless-ros-vnc makes use of three open ports:
+coros makes use of three open ports:
  - `8080`: access to visual studio code server
  - `5900`: the default vnc port (could be theoretically accessed with any vnc client, however, as the port is forwarded via noVNC that's not intended)
  - `6080`: access to the novnc web interface
 
- **Important:** for each instance of `headless-ros-vnc` these ports have to be asigned to available host-ports!
+ **Important:** for each instance of coros these ports have to be assigned to available host-ports!
 
 
 ## 😱 Known issues

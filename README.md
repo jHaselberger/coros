@@ -3,54 +3,37 @@ Jumpstart ROS developent with no headache! Full browser support. OpenGL support 
 
 >>Attention: the project is still under development. There may be gaps in the manual. Don't forget to mount the appropriate volumes to prevent data loss!
 
-## Included
+## 📦 Included
 
 ### ROS
  - full ros distro (currently melodic)
  - rqt and all plugins
  - rviz
 
-### IDE
+### IDE (accessible  through the browser)
  - full python (2.7) environment
- - jupyter lab
  - visual studio code server
 
-## Start the service
-There are two options to start `headless-ros-vnc`:
+## 🏃 Start the service
+There are two provided start and stop scripts - one for windows, the other one for unix systems.
 
-Via `docker run`:
-```
-docker run -itd -p 80:8080 -p 5900:5900 -p 6080:6080 --rm johannhaselberger/headless-ros-vnc
-```
-Or `docker-compose`
-```
-docker-compose up -d
-``` 
+### windows
+ 1. `cd utils-windows`
+ 2. `.\start-windows.cmd`
 
-### Known issues
+### unix
+ 1. `cd utils`
+ 2. `.\start.sh`
 
-#### VNC not working
-If the noVNC server is not accessable through the web interface, the virtual network has to be reseted:
-```
-docker-compose stop
-docker container prune -f
-docker network prune -f
-```
-After that you can start the service again.
 
-#### Mounting errors on windows
- - start docker with admin rights
- - right click on the docker system tray icon -> Settings
- - Under `Shared Drives` set the checkbox for the C drive
-
- ## Access the environment
+ ## 💻 Access the environment
   - to open the IDE, simply open the browser and go to [localhost:80](). The password is currently set to `dev@ros`. 
   - to see rviz or some other gui stuff, open another browser tab [localhost:6080/vnc.html]() and click connect.
 
-## Data storage
+## 💾 Data storage
 Per default all perisistent data is located at the host pc (assuming windows for now) under `C:/ros-persistent-data`. Create this folder **before** starting the container.
 
-## Configuration
+## 🔧 Configuration
 The environment comes shipped with a `docker-compose.yaml` to start the service and manage some parameters:
 
 ```yaml
@@ -76,3 +59,20 @@ Headless-ros-vnc makes use of three open ports:
  - `6080`: access to the novnc web interface
 
  **Important:** for each instance of `headless-ros-vnc` these ports have to be asigned to available host-ports!
+
+
+## 😱 Known issues
+
+### VNC not working
+If the noVNC server is not accessable through the web interface, the virtual network has to be reseted:
+```
+docker-compose stop
+docker container prune -f
+docker network prune -f
+```
+After that you can start the service again.
+
+### Mounting errors on windows
+ 1. start docker with admin rights
+ 2. right click on the docker system tray icon -> Settings
+ 3. Under `Shared Drives` set the checkbox for the C drive

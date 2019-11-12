@@ -126,6 +126,9 @@ RUN mkdir /code-server &&\
 WORKDIR /novnc
 RUN git clone https://github.com/novnc/noVNC.git
 
+# fix for offline mode -> prefatch websockify
+RUN cd ./noVNC/utils && git clone https://github.com/novnc/websockify
+
 # set the environment variables (display -> 99 and LIBGL_ALWAYS_SOFTWARE)
 ENV DISPLAY=":99" \
     GALLIUM_DRIVER="llvmpipe" \

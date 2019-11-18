@@ -21,6 +21,7 @@ Jumpstart ROS developent with no headache! Full browser support. OpenGL support 
 
 ## 🏃 Start the service
 There are two provided start and stop scripts - one for windows, the other one for unix systems.
+First pull the github project to get these scripts with `git clone https://github.com/gismo07/coros.git`.
 
 ### windows
  1. `cd utils-windows`

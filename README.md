@@ -6,8 +6,6 @@
 
 Jumpstart ROS developent with no headache! Full browser support. OpenGL support with no need of a physically atachted GPU.
 
->>Attention: the project is still under development. There may be gaps in the manual. Don't forget to mount the appropriate volumes to prevent data loss!
-
 ## 📦 Included
 
 ### ROS

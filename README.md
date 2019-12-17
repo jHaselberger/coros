@@ -93,3 +93,15 @@ After that you can start the service again.
  1. start docker with admin rights
  2. right click on the docker system tray icon -> Settings
  3. Under `Shared Drives` set the checkbox for the C drive
+ 
+### Access denied errors
+Try to start the service with sudo rights. On windows open our shell with admin rights.
+
+### Operating system linux cannot be used on this platform error
+This is mainly a windows error. Right klick on the docker tray icon and select switch to linux containers.
+
+### I can see some remote topics, however no data can be received
+That's a very common ROS network issue:
+ 1. make sure you can ping the remote machine
+ 2. add all remote host names and your own host name to `\etc\hosts` on all machines
+ 3. restart the ROS master

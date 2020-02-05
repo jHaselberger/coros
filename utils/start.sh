@@ -1,4 +1,3 @@
 #!/bin/sh
-docker container prune -f
-docker network prune -f
+docker-compose down
 docker-compose up -d

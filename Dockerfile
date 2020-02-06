@@ -99,7 +99,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         ros-melodic-rqt \
         ros-melodic-rqt* \
         jwm \
-        ros-melodic-rviz &&\
+        ros-melodic-rviz \
+        ros-melodic-desktop-full &&\
         rm -rf /var/lib/apt/lists/*
 
 # copy some needed libs

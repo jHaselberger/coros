@@ -119,7 +119,7 @@ RUN pip install \
 
 # get vs code server
 RUN mkdir /code-server &&\ 
-    wget -qO- https://github.com/cdr/code-server/releases/download/3.0.0/code-server-3.0.0-linux-x86_64.tar.gz \
+    wget -qO- https://github.com/cdr/code-server/releases/download/2.1523-vsc1.38.1/code-server2.1523-vsc1.38.1-linux-x86_64.tar.gz \
     | tar xvz --strip-components=1 -C /code-server
 
 

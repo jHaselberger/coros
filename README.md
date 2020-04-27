@@ -27,7 +27,8 @@ First pull the github project to get these scripts with `git clone https://githu
 
 ### unix
  1. `cd utils`
- 2. `.\start.sh`
+ 2. `sudo chmod +x ./start.sh`
+ 2. `./start.sh`
 
 
  ## 💻 Access the environment

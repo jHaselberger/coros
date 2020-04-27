@@ -81,15 +81,6 @@ coros makes use of three open ports:
 
 ## 😱 Known issues
 
-### VNC not working
-If the noVNC server is not accessable through the web interface, the virtual network has to be reseted:
-```
-docker-compose stop
-docker container prune -f
-docker network prune -f
-```
-After that you can start the service again.
-
 ### Mounting errors on windows
  1. start docker with admin rights
  2. right click on the docker system tray icon -> Settings

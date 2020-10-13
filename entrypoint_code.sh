@@ -18,6 +18,5 @@ echo "starting noVNC"
 /novnc/noVNC/utils/launch.sh --vnc localhost:5900 &
 
 source /opt/ros/melodic/setup.bash
-#source /opt/carla-ros-bridge/<melodic or kinetic>/setup.bash
 
 /code-server/code-server --user-data-dir /workspace --allow-http --password $PASSWORD --auth password

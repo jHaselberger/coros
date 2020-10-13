@@ -65,7 +65,7 @@ Since version `1.1` COROS comes with a preinstalled version of the [Carla Python
 To use the Carla-Ros bridge, make sure that Carla is running and accessible over the network.
 
 #### Linux users with NVIDIA GPU
-1. Get the right caral docker image:
+1. Get the right carla docker image:
     ```bash
     sudo docker pull carlasim/carla:0.9.10.1
     ```

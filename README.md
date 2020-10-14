@@ -96,7 +96,10 @@ To use the Carla-Ros bridge, make sure that Carla is running and accessible over
 #### Windows users
 1. Download the `0.9.10.1` version from the offical [carla releases](https://github.com/carla-simulator/carla/releases/tag/0.9.10.1).
 
-2. Start the carla exe located under `CARLA_0.9.10.1\WindowsNoEditor\CarlaUE4.exe`.
+2. Start the carla exe located under `CARLA_0.9.10.1\WindowsNoEditor\CarlaUE4.exe`:
+     ```bash
+     ./CarlaUE4.exe -Carla-server -windowed
+     ```
 
 ### Start the ROS bridge
 Within COROS everything is allready setup to communicate with carla.

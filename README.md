@@ -6,6 +6,8 @@
 
 Jumpstart ROS developent with no headache! Full browser support. OpenGL support with no need of a physically atachted GPU.
 
+![COROS in web browser](https://raw.githubusercontent.com/gismo07/coros/master/assets/coros_web.png)
+
 
 ## 📦 Included
 
@@ -13,6 +15,7 @@ Jumpstart ROS developent with no headache! Full browser support. OpenGL support 
  - full ros distro (**currently melodic**)
  - rqt and all plugins
  - rviz
+ - carla ros bridge
 
 ### IDE (accessible  through the browser)
  - full python (2.7) environment

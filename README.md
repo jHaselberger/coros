@@ -79,7 +79,7 @@ To use the Carla-Ros bridge, make sure that Carla is running and accessible over
     ```bash
     sudo docker run \
       -e SDL_VIDEODRIVER=x11 \
-      -e DISPLAY=:99 \
+      -e DISPLAY=$DISPLAY \
       -v /tmp/.X11-unix:/tmp/.X11-unix \
       -p 2000-2002:2000-2002 \
       -it \
@@ -91,7 +91,7 @@ To use the Carla-Ros bridge, make sure that Carla is running and accessible over
     ```bash
     sudo docker run \
       -e SDL_VIDEODRIVER=offscreen \
-      -e DISPLAY=:99 \
+      -e DISPLAY=$DISPLAY \
       -v /tmp/.X11-unix:/tmp/.X11-unix \
       -p 2000-2002:2000-2002 \
       -it \

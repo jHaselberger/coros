@@ -61,6 +61,8 @@ Since version `1.1` COROS comes with a preinstalled version of the [Carla Python
 
 > The Carla simulation itself is not part of COROS to maintain platform independence
 
+<img src="https://raw.githubusercontent.com/gismo07/coros/master/assets/carla.jpg" />
+
 ### Start Carla
 To use the Carla-Ros bridge, make sure that Carla is running and accessible over the network.
 

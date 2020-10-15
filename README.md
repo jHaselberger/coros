@@ -75,8 +75,15 @@ To use the Carla-Ros bridge, make sure that Carla is running and accessible over
     ```bash
     sudo docker pull carlasim/carla:0.9.10.1
     ```
-2. start carla while forwarding the x context:
+2. Make sure the package `xhost` is available on your system. If not:
+    ```
+    sudo apt-get update
+    sudo apt-get install xhost
+    ```
+
+3. start carla while forwarding the x context:
     ```bash
+    xhost local:root
     sudo docker run \
       -e SDL_VIDEODRIVER=x11 \
       -e DISPLAY=$DISPLAY \
@@ -87,8 +94,9 @@ To use the Carla-Ros bridge, make sure that Carla is running and accessible over
       carlasim/carla:0.9.10.1 ./CarlaUE4.sh -opengl
     ```
 
-3. alternatively, carla can also be started without graphical output:
+4. alternatively, carla can also be started without graphical output:
     ```bash
+    xhost local:root
     sudo docker run \
       -e SDL_VIDEODRIVER=offscreen \
       -e DISPLAY=$DISPLAY \

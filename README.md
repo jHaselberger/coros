@@ -166,7 +166,7 @@ coros makes use of three open ports:
     ```sh
     sudo docker build --compress -f Dockerfile.customCoros --force-rm --rm -t coros:custom .
     ```
- 5. Set the target image within `utils/docker-compose.yaml` and `https://github.com/gismo07/coros/blob/master/utils-windows/docker-compose.yaml` to `Dockerfile.customCoros`
+ 5. Set the target image within `utils/docker-compose.yaml` and `utils-windows/docker-compose.yaml` to `Dockerfile.customCoros`
 
 
 ____

@@ -150,6 +150,24 @@ coros makes use of three open ports:
  - `6080`: access to the novnc web interface
 
  **Important:** for each instance of coros these ports have to be assigned to available host-ports!
+ 
+ ## 📥 Install Packages Permanently
+ To avoid installing the same packages over and over again after each container reboot, it makes sense to create your own COROS image.
+ 
+ 1. Create a new Dockerfile (e.g. `Dockerfile.customCoros`)
+ 2. Within the image derive from `johannhaselberger/coros`
+ 3. Install the packages, e.g. git with:
+    ```sh
+    RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        git &&\
+        rm -rf /var/lib/apt/lists/*
+    ```
+ 4. Build and tag the image with:
+    ```sh
+    sudo docker build --compress -f Dockerfile.customCoros --force-rm --rm -t coros:custom .
+    ```
+ 5. Set the target image within `utils/docker-compose.yaml` and `https://github.com/gismo07/coros/blob/master/utils-windows/docker-compose.yaml` to `Dockerfile.customCoros`
+
 
 ____
 ## 😱 Known issues
